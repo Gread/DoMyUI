@@ -77,6 +77,7 @@
                                     var container = new DoMyUI.container();
                                     container = panel.container[k];
                                     this.core.mainCore.buildContainer(container, panel);
+                                   
                                 }
                             }
                         }
@@ -118,7 +119,7 @@
             },
 
             buildContainer : function(container){
-				switch container.type.toLowerCase() {
+				switch (container.type.toLowerCase()) {
 					case "grid":
 						buildGrid(container);
 						break;
@@ -175,11 +176,11 @@
 
             buildButton : function(){
 
-            }
+            },
 			
 			buildPassWord : function(){
 
-            }
+           },
 			
 			buildLink : function(){
 

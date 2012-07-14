@@ -4,9 +4,9 @@ DoMyUI.View.prototype = {
     search : null,
 	setSearch: function setSearch(value) { this.search = value; return this; },
     main : null,
-	setMain function setMain(value) { this.main = value; return this; },
+	setMain : function setMain(value) { this.main = value; return this; },
 	format : null,
-	setFormat function setFormat(value) { this.format = value; return this; },
+	setFormat : function setFormat(value) { this.format = value; return this; },
 	onReadyDocument: null
 };
 
@@ -75,7 +75,7 @@ DoMyUI.Container.prototype = {
 	layout: new DoMyUI.Layout(),
 	data: null,
 	validation: new DoMyUI.Validation(),
-	options: new DoMyUI.Options()	
+	options: new DoMyUI.Options(),	
 	container: null
 };
 
@@ -100,7 +100,7 @@ DoMyUI.Options.prototype = {
     isGridMember: null,
 	isEditable: null,
 	isKey: null,
-	isSortable,
+	isSortable : null,
 	isLabelSameLine : null,
 	rightPrevious : null, // if true this element ll be placed in right of previous element, default false
 	checkAllInHeader: null,
