@@ -1,58 +1,35 @@
-/*
- *  Project: DoMyUI
- *  Description: UI Generator based on a especifield JSON
- *  Author: Ricardson Albuquerque @nosdracir
- *  License: MIT
- */
+<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui-1.8.20.custom.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jqGrid.min.js"></script>
+<script type="text/javascript" src="jquery.domyui.js"></script>
+<script type="text/javascript" src="viewModel.domyui.js"></script>
 
-// the semi-colon before function invocation is a safety net against concatenated 
-// scripts and/or other plugins which may not be closed properly.
-;(function ( $, window, undefined ) {
-    
-    // undefined is used here as the undefined global variable in ECMAScript 3 is
-    // mutable (ie. it can be changed by someone else). undefined isn't really being
-    // passed in so we can ensure the value of it is truly undefined. In ES5, undefined
-    // can no longer be modified.
-    
-    // window is passed through as local variable rather than global
-    // as this (slightly) quickens the resolution process and can be more efficiently
-    // minified (especially when both are regularly referenced in your plugin).
 
-    // Create the defaults once
-    var pluginName = 'doMyUI',
-        document = window.document,
-        defaults = {
-            data: "value"
-        };
+ <script type="text/javascript">
+	var viewModel = new DoMyUI.View();
+	
+	//tabs
+	var tabModel_1 = new DoMyUI.Tab();	
+	var tabModel_2 = new DoMyUI.Tab();
+	
+	//panels
+	var panelModel_1_1 = new DoMyUI.Panel();
+	var panelModel_1_2 = new DoMyUI.Panel();
+	var panelModel_2_1 = new DoMyUI.Panel();
+	
+	panelModel_1_1.setId("pnl_1").setTitle("Teste_1");
+	panelModel_1_2.setId("pnl_1").setTitle("Teste_2");
+	panelModel_2_1.setId("pnl_2").setTitle("Teste_1");
+	
+	//setting panels in own tabs
+	tabModel_1.setPanel([panelModel_1_1, panelModel_1_2]);
+	tabModel_2.setPanel([panelModel_2_1]);
+	
+	//setting tabs in mainArea
+	viewModel.main.setTab([tabModel_1, tabModel_2]);
+	
+	$.doMyUI("searchDiv", "mainDiv", viewModel);
+ </script>
 
-    // The actual plugin constructor
-    function Plugin( element, options ) {
-        this.element = element;
-
-        // jQuery has an extend method which merges the contents of two or 
-        // more objects, storing the result in the first object. The first object
-        // is generally empty as we don't want to alter the default options for
-        // future instances of the plugin
-        this.options = $.extend( {}, defaults, options) ;
-        
-        this._defaults = defaults;
-        this._name = pluginName;
-        
-        this.init();
-    }
-
-    Plugin.prototype.init = function () {
-        
-    };
-
-    // A really lightweight plugin wrapper around the constructor, 
-    // preventing against multiple instantiations
-    $.fn[pluginName] = function ( options ) {
-        return this.each(function () {
-            if (!$.data(this, 'plugin_' + pluginName)) {
-                $.data(this, 'plugin_' + pluginName, new Plugin( this, options ));
-            }
-        });
-    };
-
-}(jQuery, window));
+<div id="searchDiv"></div>
+<div id="mainDiv"></div>

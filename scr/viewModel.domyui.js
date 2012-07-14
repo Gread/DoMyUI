@@ -1,45 +1,62 @@
 DoMyUI.View = function () { };
-DoMyUI.View.prototype = { 
-    searchModel : null,
-    mainModel : null,
+DoMyUI.View.prototype = {
+	constructor: DoMyUI.View, 
+    search : null,
+	setSearch: function setSearch(value) { this.search = value; return this; },
+    main : null,
+	setMain function setMain(value) { this.main = value; return this; },
 	format : null,
+	setFormat function setFormat(value) { this.format = value; return this; },
 	onReadyDocument: null
 };
 
 DoMyUI.Search = function () { };
-DoMyUI.Search.prototype = { 
-    container: null,
-	alwaysVisible: null // default false
+DoMyUI.Search.prototype = {
+	constructor: DoMyUI.Search,
+	container: null,
+	setContainer: function setContainer(value) { this.container = value; return this; },
+	alwaysVisible: false,    
+	setAlwaysVisible: function setAlwaysVisible(value) { this.alwaysVisible = value; return this; }
 };
 
 DoMyUI.Main = function () { };
 DoMyUI.Main.prototype = {
-    tabModel : null
+    tab : null,
+	setTab : function setTab(value) { this.tab = value; return this; }
 };
 
 DoMyUI.Tab = function () { };
 DoMyUI.Tab.prototype = {
-    panelModel : null,
+    panel : null,
+	setPanel: function setPanel(value) { this.panel = value; return this; },
 	title: null,
+	setTitle: function setTitle(value) { this.title = value; return this; },
 	id: null,
-	style: null,
-	order: null,
-    tabModel : null
+	setId: function setId(value) { this.id = value; return this; },
+	layout: null,
+	setLayout: function setLayout(value) { this.layout = value; return this; },
+    tab : null,
+	setTab : function setTab(value) { this.tab = value; return this; }
 };
 
 DoMyUI.Panel = function () { };
 DoMyUI.Panel.prototype = {
 	id: null,
+	setId: function setId(value) { this.id = value; return this; },
 	title: null,
+	setTitle: function setTitle(value) { this.title = value; return this; },
     container : null,
+	setContainer: function setContainer(value) { this.container = value; return this; },
     buttonsAlign: null,
 	saveButtonDesc :null,
 	insertButtonDesc: null,
 	cancelButtonDesc: null,
 	layout: null,
+	setLayout: function setLayout(value) { this.layout = value; return this; },
     isCrudButtons: null, // if true will be create a Insert/Save button for update the grid, dont set true if you wanna inlineEdit
 	isGridAfterElements: null,
-    tabModel : null
+    tab : null,
+	setTab : function setTab(value) { this.tab = value; return this; }
 };
 
 DoMyUI.Data = function () { };
@@ -54,11 +71,11 @@ DoMyUI.Container.prototype = {
     name  : null,
 	id  : null,
 	type : null, //checkbox, text, select, radio, password, grid, button, checkList, link
-    events : null,
-	layout: null,
+    events : new DoMyUI.Events(),
+	layout: new DoMyUI.Layout(),
 	data: null,
-	validation: null,
-	options: null,
+	validation: new DoMyUI.Validation(),
+	options: new DoMyUI.Options()	
 	container: null
 };
 
@@ -66,7 +83,7 @@ DoMyUI.Events = function () { };
 DoMyUI.Events.prototype = {
     onChanged: null,
 	onCreated : null,
-	beforeCreate : null,
+	onbeforeCreate : null,
     onClick : null,
 	cascadeFrom: null
 };
