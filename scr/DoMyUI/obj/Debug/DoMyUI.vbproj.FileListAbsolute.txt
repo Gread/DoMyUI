@@ -1,0 +1,12 @@
+C:\Users\ralbuquerque\Documents\GitHub\DoMyUI\scr\DoMyUI\bin\DoMyUI.dll
+C:\Users\ralbuquerque\Documents\GitHub\DoMyUI\scr\DoMyUI\bin\DoMyUI.pdb
+C:\Users\ralbuquerque\Documents\GitHub\DoMyUI\scr\DoMyUI\bin\DoMyUI.xml
+C:\Users\ralbuquerque\Documents\GitHub\DoMyUI\scr\DoMyUI\bin\EntityFramework.dll
+C:\Users\ralbuquerque\Documents\GitHub\DoMyUI\scr\DoMyUI\bin\EntityFramework.xml
+C:\Users\ralbuquerque\Documents\GitHub\DoMyUI\scr\DoMyUI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ralbuquerque\Documents\GitHub\DoMyUI\scr\DoMyUI\obj\Debug\DoMyUI.Resources.resources
+C:\Users\ralbuquerque\Documents\GitHub\DoMyUI\scr\DoMyUI\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\ralbuquerque\Documents\GitHub\DoMyUI\scr\DoMyUI\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\ralbuquerque\Documents\GitHub\DoMyUI\scr\DoMyUI\obj\Debug\DoMyUI.dll
+C:\Users\ralbuquerque\Documents\GitHub\DoMyUI\scr\DoMyUI\obj\Debug\DoMyUI.xml
+C:\Users\ralbuquerque\Documents\GitHub\DoMyUI\scr\DoMyUI\obj\Debug\DoMyUI.pdb

@@ -1,3 +1,4 @@
+if (typeof(DoMyUI) == "undefined") { var DoMyUI = {}; };
 DoMyUI.View = function () { };
 DoMyUI.View.prototype = {
 	constructor: DoMyUI.View, 
