@@ -5,7 +5,8 @@ setTimeout(function(){
 var test = function (localidade){
 var options = $('#dataAtendimento option:contains("Abril")');
 if (options.length > 0)
- alert('achei na ' + localidade + ' a seguinte data: ' + options.val());
+ var urlfake = 'achei na ' + localidade + ' a seguinte data: ' + options.val();
+ window.open (urlfake + '.html', 'popup') 
 };
 
 
